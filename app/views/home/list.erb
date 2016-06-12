@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h1>Email List</h1>
+    <% @every_post.each do |p| %>
+        이메일 : <%= p.email %><br>
+        제  목 : <%= p.title %><br>
+        내  용 : <%= p.content %><br>
+        시  간 : <%= p.created_at %><br>
+        <a href="/update_view/<%= p.id %>">[수정]</a>
+        <a href="/destroy/<%= p.id %>">[삭제]</a>
+        <hr>
+    <% end %>
+    <h1><a href="/">Go to Main</a></h1>
+  </div>
+</div>
